@@ -1,0 +1,27 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/ai_works",
+        "prod_uri":"mysql://root:@localhost/ai_works",
+        "fb_url":"https:facebook.com/Artificial_android",
+        "tw_url":"https:twiter.com/Artificial_android",
+        "gh_url":"https:github.com/Artificial_android",
+        "blog_name":"Artificial ANDROID",
+        "tag_line":"Pythonic Way AI",
+        "gmail-user":"bhoyasnehal08@gmail.com",
+        "gmail-password":"#",
+        "about_text":"AI is Developments of inteligent Android We are make a Better Future and We have pythonic Stuff to create AI engines",
+        "no_of_posts":2,
+        "login_img":"AI2.png",
+        "admin_user":"snehal",
+        "admin_password":"634281",
+        "upload_location":"C:\\Users\\SNEHAL BHOYA\\Downloads\\Video"
+
+
+
+    }
+
+
+
+}

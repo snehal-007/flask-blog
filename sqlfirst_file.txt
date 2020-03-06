@@ -1,0 +1,41 @@
+from flask import Flask, render_template, request
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+
+app = Flask(__name__)
+
+#SQL database
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/db_name'
+db = SQLAlchemy(app)
+
+
+class Contact(db.Model):
+    '''sno,name,phon_no,massage,email,date '''
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+
+
+..............calling mathod..............
+
+@app.route("/contact.html",methods=['GET','POST'])                                   # after domain name /about and execute "snehal function"
+def contact():
+    if (request.method=='POST'):
+
+        # Add Entry to database
+        name = request.form.get('name')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        massage = request.form.get('massage')
+
+        entry = Contacts(name=name,phon_no=phone,massage=massage,date=datetime.now(),email=email)
+        db.session.add(entry)
+        db.session.commit()
